@@ -10,8 +10,7 @@ jobs:
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v2
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: master # The branch the action should deploy to.
+        BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: storybook-static # The folder the action should deploy.
-        BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
