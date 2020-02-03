@@ -15,3 +15,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.token }}
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: storybook-static # The folder the action should deploy.
+        BUILD_SCRIPT: npm install && npm run build-storybook
