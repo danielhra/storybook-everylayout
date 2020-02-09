@@ -2,8 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSwitcher = styled.div`
-  --threshold: 60rem;
-  --space: 1rem;
+  --threshold: ${props => props.threshold || "60rem"};
+  --space: ${props => props.space || "var(--s1)"};
+
+  & > * {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc((var(--space) / 2) * -1);
+  }
 
   & > * > * {
     flex-grow: 1;
@@ -11,22 +17,20 @@ const StyledSwitcher = styled.div`
     margin: calc(var(--space) / 2);
   }
 
-  & > * > :nth-last-child(n + 5),
-  & > * > :nth-last-child(n + 5) ~ * {
+  & > * > :nth-last-child(n + ${props => props.limit || 5}),
+  & > * > :nth-last-child(n + ${props => props.limit || 5}) ~ * {
     flex-basis: 100%;
   }
 `;
 
-const IntermediaryWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc((var(--space) / 2) * -1);
-`;
-
 function Switcher(props) {
   return (
-    <StyledSwitcher>
-      <IntermediaryWrapper>{props.children}</IntermediaryWrapper>
+    <StyledSwitcher
+      threshold={props.threshold}
+      space={props.space}
+      limit={props.limit}
+    >
+      {props.children}
     </StyledSwitcher>
   );
 }

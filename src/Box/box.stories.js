@@ -2,7 +2,7 @@ import React from "react";
 import Box from "./Box";
 
 export default {
-  title: "box",
+  title: "Design System/Layout/Box",
   component: Box
 };
 

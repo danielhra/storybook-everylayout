@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCluster = styled.div`
-  --space: 1rem;
+  --space: ${props => props.space || "var(--s1)"};
 
   & > * {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: ${props => props.justify || "center"};
+    align-items: ${props => props.align || "center"};
     margin: calc(var(--space) / 2 * -1);
   }
 
@@ -19,8 +19,12 @@ const StyledCluster = styled.div`
 
 function Cluster(props) {
   return (
-    <StyledCluster>
-      <ul>{props.children}</ul>
+    <StyledCluster
+      justify={props.justify}
+      align={props.align}
+      space={props.space}
+    >
+      {props.children}
     </StyledCluster>
   );
 }

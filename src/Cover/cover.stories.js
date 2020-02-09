@@ -2,7 +2,7 @@ import React from "react";
 import Cover from "./Cover";
 
 export default {
-  title: "cover",
+  title: "Design System/Layout/Cover",
   component: Cover
 };
 

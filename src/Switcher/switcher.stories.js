@@ -1,78 +1,96 @@
+import { text, number, withKnobs } from "@storybook/addon-knobs/react";
+
 import React from "react";
 import Switcher from "./Switcher";
-import Card from "../Card";
+
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import Stack from "../Stack/Stack";
 
 export default {
-  title: "switcher",
-  component: Switcher
+  title: "Design System/Layout/Switcher",
+  component: Switcher,
+  decorators: [withKnobs]
 };
 
 export const switcherElement = () => (
-  <Switcher>
-    <Card>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </p>
-    </Card>
-    <Card>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </p>
-    </Card>
-    <Card>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </p>
-    </Card>
-    <Card>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </p>
-    </Card>
-    <Card>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </p>
-    </Card>
+  <Switcher
+    threshold={text("threshold", "60em")}
+    space={text("space", "var(--s1)")}
+    limit={number("limit", 5)}
+  >
+    <div>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>React</h2>
+              <p>act in response to something; respond in a particular way.</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Vue</h2>
+              <p>the vue documentation.</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Angular</h2>
+              <p>RThe Angular documentation</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Angular</h2>
+              <p>RThe Angular documentation</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Angular</h2>
+              <p>RThe Angular documentation</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Angular</h2>
+              <p>RThe Angular documentation</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card>
+        <CardActionArea>
+          <CardContent>
+            <Stack>
+              <h2>Angular</h2>
+              <p>RThe Angular documentation</p>
+            </Stack>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
   </Switcher>
 );
