@@ -1,0 +1,44 @@
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  --measure: 60ch;
+  --border-thin: 0.1em;
+}
+
+* {
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+  max-width: 60em;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+html,
+body,
+div,
+section,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+/* utilities classes should only be created if needed */
+
+
+/*# sourceMappingURL=main.0f701cbb.chunk.css.map*/
